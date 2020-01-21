@@ -217,12 +217,25 @@
                             childElements = el.children;
         
                             size = el.getAttribute('data-size').split('x');
+
+                            var w = parseInt(size[0], 10)
+                            var h = parseInt(size[1], 10)
+
+                            // Check screen size
+                            let screenY = window.screen.height;
+                            let screenX = window.screen.width;
+
+                            if ((w < screenX) && (h < screenY)) {
+                                let scale = screenY / h;
+                                w = w * scale;
+                                h = h * scale;
+                            }
         
                             // create slide object
                             item = {
                                 src: el.getAttribute('href'),
-                                w: parseInt(size[0], 10),
-                                h: parseInt(size[1], 10),
+                                w: w,
+                                h: h,
                                 author: el.getAttribute('data-author')
                             };
         

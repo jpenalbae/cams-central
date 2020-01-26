@@ -555,6 +555,14 @@
                 initPhotoSwipeFromDOM('.demo-gallery');
         
             })();
+
+
+            var hash = location.hash.replace('#','');
+
+            if(hash != 'refreshed') {
+                location.hash = 'refreshed';
+                location.reload(true);
+            }
         
             </script>
         

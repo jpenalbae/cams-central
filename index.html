@@ -249,6 +249,8 @@
 
 
         <script type="text/javascript">
+            var timestamp = new Date().getTime();
+
             (function() {
         
                 var initPhotoSwipeFromDOM = function(gallerySelector) {
@@ -290,7 +292,7 @@
         
                             // create slide object
                             item = {
-                                src: el.getAttribute('href'),
+                                src: el.getAttribute('href') + "?t=" + timestamp,
                                 w: w,
                                 h: h,
                                 author: el.getAttribute('data-author')
@@ -551,22 +553,18 @@
                         openPhotoSwipe( hashData.pid,  galleryElements[ hashData.gid - 1 ], true, true );
                     }
                 };
-        
+
+
+                function reload_imgs() {
+                    var imgs = document.getElementsByTagName("img");
+
+                    for (var i = 0; i < imgs.length; i++)
+                        imgs[i].src = imgs[i].src + "?t=" + timestamp;
+                }
+
+                reload_imgs();
                 initPhotoSwipeFromDOM('.demo-gallery');
-        
             })();
-
-
-
-            function reload_imgs() {
-                var imgs = document.getElementsByTagName("img");
-                var timestamp = new Date().getTime();
-
-                for (var i = 0; i < imgs.length; i++)
-                    imgs[i].src = imgs[i].src + "?t=" + timestamp;
-            }
-
-            reload_imgs();
         
             </script>
         

@@ -473,7 +473,7 @@ p, ul.text-list {
   margin: 0;
   background: #EEE;
   /*background: linear-gradient(180deg, #eee 0%,#fff 100%);*/
-  padding: 132px 0;
+  /* padding: 132px 0; */
 }
 
 
@@ -955,3 +955,148 @@ margin: 0 1px 1px 0;
 
 
 
+
+/* Weather forecast */
+
+/* body {
+  background: #dce2e5;
+  
+} */
+
+.component__weather-box {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 11px;
+
+  margin: 30px auto;
+  width: 700px;
+  border: 1px solid #de6042;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 2px 5px 20px 1px #444;
+}
+
+.component__weather-content {
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  background: #E06B4F;
+  height: 120px;
+}
+
+.component__weather-content:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0.3;
+  background-image: url("https://nunnz.files.wordpress.com/2013/11/4.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 63%;
+  background-size: cover;
+}
+
+.weather-content__overview {
+  width: 50%;
+  text-align: center;
+  display: inline-block;
+  float: left;
+  z-index: 2;
+  position: relative;
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 40px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  margin-top: 0.75em;
+}
+
+.weather-content__temp {
+  width: 50%;
+  z-index: 2;
+  text-align: center;
+  float: left;
+  font-size: 50px;
+  text-align: center;
+  margin-top: 0.5em;
+  position: relative;
+  vertical-align: middle;
+}
+
+.weather-content__temp .degrees {
+  line-height: 40px;
+}
+
+.weather-content__temp .wi-degrees {
+  margin-left: -10px;
+  vertical-align: top !important;
+}
+
+.currentTemp .wi {
+  margin-right: 20px;
+  font-size: 40px;
+  vertical-align: baseline;
+}
+
+.component__forecast-box {
+  display: flex;
+  clear: both;
+}
+
+.forecast__item {
+  flex: 1;
+  text-align: center;
+}
+
+.forecast-item__heading {
+  background: #e68872;
+  border: 1px solid #d64826;
+  border-left: none;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 800;
+  padding: 10px;
+}
+
+.forecast-item__info {
+  background: #fff;
+  color: #E06B4F;
+  padding-bottom: 10px;
+  border-right: 1px solid #d64826;
+}
+
+.forecast-item__info .wi {
+  display: block;
+  margin: 0 auto;
+  font-size: 24px;
+  padding: 15px 0;
+}
+
+.forecast-item__info .degrees {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.degrees .info {
+  font-size: 14px;
+  display: inline;
+}
+
+.wind {
+  padding: 0 !important;
+}
+
+.forecast-item__info .degrees .wi-degrees {
+  display: inline;
+}
+
+small {
+  font-size: 12px;
+}

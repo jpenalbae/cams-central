@@ -464,13 +464,13 @@ p, ul.text-list {
 
 .section {
   width: 100%;
-  margin-top: 176px;
+  margin-top: 40px;
 }
 .docs {
   margin-top: 60px;
 }
 .section--head {
-  margin: 0;
+
   background: #EEE;
   /*background: linear-gradient(180deg, #eee 0%,#fff 100%);*/
   /* padding: 132px 0; */
